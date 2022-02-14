@@ -124,11 +124,190 @@
 // for (let i = 1; i < 1000; i++) {
 //   console.log(i)
 // }
-var myArray = [
-  'Javascript',
-  'Java',
-  'PHP'
-]
-for (let i = 0; i < myArray.length; i++) {
-  console.log(myArray[i]);
+// var myArray = [
+//   'Javascript',
+//   'Java',
+//   'PHP'
+// ]
+// for (let i = 0; i < myArray.length; i++) {
+//   console.log(myArray[i]);
+// }
+
+/**
+ * 50. For in
+ */
+// var myInfo = {
+//   name: 'Nhan Nguyen',
+//   age: 18,
+//   address: 'Ha noi, VN'
+// }
+
+// for (var key in myInfo) {
+//   console.log(myInfo[key])
+// }
+
+// var language = ['Java', 'PHP', 'Ruby']
+// for (var key in language) {
+//   console.log(language[key])
+// }
+
+// var myString = 'Javascript';
+// for (var key in myString) {
+//   console.log(myString[key])
+// }
+
+/**
+ * 51. For of
+ */
+// var myInfo = {
+//   name: 'Nhan Nguyen',
+//   age: 19
+// };
+// for (var value of Object.values(myInfo)) {
+//   console.log(value)
+// }
+
+/**
+ * 52. Vong lap while
+ */
+// var i = 0;
+// while (i < 10) {
+//   console.log(i)
+//   i++;
+// }
+
+/**
+ * 53. Vong lap do while
+ */
+// var i = 0;
+// var isSuccess = false;
+
+// do {
+//   i++;
+//   console.log('Nap the lan ' + i)
+
+//   if (false) {
+//     isSuccess = true;
+//   }
+// } while (!isSuccess & i <= 3)
+
+/**
+ * 54. Break va continue
+ */
+// for (var i = 0; i < 10; i++) {
+  
+//   if (i % 2 !== 0)
+//     continue
+//   console.log(i);
+// }
+
+/**
+ * 55. Vong lap long nhau
+ */
+// var myArray = [
+//   [1, 2],
+//   [3, 4],
+//   [5, 6]
+// ]
+
+// for (var i = 0; i < myArray.length; i++) {
+//   for (var j = 0; j < myArray[i].length; j++)
+//   console.log(myArray[i][j])
+// }
+
+/**
+ * 57. Gioi thieu ve de quy
+ */
+
+// function countDown(num) {
+//   if (num <= 0) {
+//     return num;
+//   }
+//   console.log(num);
+//   return countDown(num - 1)
+// }
+
+// countDown(10)
+// var gt = 1;
+
+// function loop(number) {
+//   if (number > 0) {
+//     return number *= loop(number - 1)
+//   }
+//   return 1;
+// }
+
+// // var array = ['a', 'b', 'c', 'a', 'a', 'b'];
+// var array = ['Javascript', 'PHP', 'Ruby']
+
+// console.log(loop(3))
+
+/**
+ * 58. Lam viec voi mang (phan 2) (forEach, every, some, find, filter)
+ */
+// var courses = [
+//   {
+//     id: 1,
+//     name: 'Javascript',
+//     coin: 250
+//   },
+//   {
+//     id: 2,
+//     name: 'Java',
+//     coin: 250
+//   },
+//   {
+//     id: 3,
+//     name: 'PHP',
+//     coin: 0
+//   },
+//   {
+//     id: 4,
+//     name: 'React',
+//     coin: 0
+//   }
+// ]
+
+// var isFree = courses.filter(function(course, index) {
+//   console.log(index)
+//   return course.coin === 0;
+// })
+
+// console.log(isFree)
+
+/**
+ * 59. Array map() method
+ */
+var courses = [
+  {
+    id: 1,
+    name: 'Javascript',
+    coin: 250
+  },
+  {
+    id: 2,
+    name: 'Java',
+    coin: 250
+  },
+  {
+    id: 3,
+    name: 'PHP',
+    coin: 0
+  },
+  {
+    id: 4,
+    name: 'React',
+    coin: 0
+  }
+];
+
+function courseHandler(course) {
+  return {
+    id: course.id,
+    name: `Khoa hoc: ${course.name}`
+  }
 }
+
+var newCourses = courses.map(courseHandler)
+console.log(newCourses);
+
