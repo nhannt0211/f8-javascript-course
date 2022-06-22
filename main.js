@@ -311,3 +311,4 @@ function courseHandler(course) {
 var newCourses = courses.map(courseHandler)
 console.log(newCourses);
 
+console.log('learning')
